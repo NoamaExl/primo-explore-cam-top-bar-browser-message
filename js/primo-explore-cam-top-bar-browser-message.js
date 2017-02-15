@@ -103,9 +103,11 @@ app.controller('PrmTopbarAfterController', ['$location', '$mdDialog', '$timeout'
             var DialogController = function DialogController($scope, $mdDialog) {
 
                 $scope.closeDialog = function () {
-                    let mask = angular.element(document.getElementsByClassName('md-scroll-mask'));
-                    if(mask && mask.length > 0){
-                        angular.element(document.getElementsByClassName('md-scroll-mask'))[0].remove();
+                   if (window.location.pathname.includes("fulldisplay")) {
+                        var mask = angular.element(document.getElementsByClassName('md-scroll-mask'));
+                        if (mask && mask.length > 0) {
+                            angular.element(document.getElementsByClassName('md-scroll-mask'))[0].remove();
+                        }
                     }
                     $mdDialog.hide();
                 };
