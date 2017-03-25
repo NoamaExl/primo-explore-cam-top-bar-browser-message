@@ -2,8 +2,6 @@
 "use strict";
 'use strict';
 
-var app = angular.module('viewCustom', ['angularLoad']);
-
 var browserVersions = {
     'IE': 11,
     'MSIE': 11,
